@@ -1,0 +1,372 @@
+body{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+#canvas{
+    background-color: black;
+    display: block;
+    position: absolute; 
+   
+}
+
+
+
+.background{
+    width: 100vw;
+    height: 100vh;
+}
+
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.maintitle{
+    position: absolute;
+    left: 44%;
+    width: 350px;
+    top: 5px;
+    font-family: 'Lilita One', cursive;
+}
+
+.d-none{
+    display: none;
+}
+
+.entrancePage{    
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.startPage{
+    
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+    
+.start-button{
+    position: absolute;
+    width: 100px;
+    height:100px;
+    left: 45%;
+    top: 50px;
+    cursor: pointer;
+}
+
+.start-button:hover{
+    filter:invert(1);
+}
+
+
+.directions{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 700px;
+    bottom: 70px;
+    z-index: 1;
+
+}
+
+.directionDiv{
+    width: 210px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.maximize{
+   position: absolute;
+    top: 70px;
+    right:285px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.restart{
+    position: absolute;
+     top: 70px;
+     right:335px;
+     width: 45px;
+     height: 43px;
+     cursor: pointer;
+ }
+
+.directionFotos{
+    width: 50px;
+    height: 50px;    
+}
+
+.directionFotos:hover{
+    filter: invert(1);
+}
+
+.directionWords{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 700px;
+    height: 20px;
+    margin: 0;
+    bottom: 10px;
+    font-family: 'Lilita One', cursive;
+    
+}
+.touchButton{
+    
+    background-color: rgb(216, 52, 52);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.directionWordsGroup{
+    display: flex;
+    justify-content: space-around;
+    width: 222px;
+}
+
+p{
+    margin: 0;
+}
+.gameOverPic{
+    position: absolute;
+    width: 720px;
+    height: 480px;
+    top: 64px;
+   
+}
+
+.newTitleStyle{
+    width: 258px;
+    top: 8px;
+    left: 39%;
+    font-size: 50px;
+    color: rgb(246 53 8);
+    margin: 0;  
+}
+
+
+@media only screen and (max-width:720px) {
+    #canvas {
+        width: 100%;
+        height: 100%;
+    }  
+    .gameOverPic{
+        width: auto;
+        height: 400px;
+        top: 0;  
+    }
+    .directions{
+        width: 90%;
+        height: 30px;
+        bottom: 40px;
+         
+    }
+    .directionWords{
+    
+        display: none;
+    }
+    .newTitleStyle{
+        display: none;
+    }   
+    .touchButton{
+        height: 58px;
+
+    } 
+}
+
+
+@media only screen and (max-height:200px) {
+
+    canvas {
+        width: 100%;
+        height: 100%;  
+    }
+    .directions{
+        width: 30px;
+        height: 30px;
+    }
+    .directionWords{
+        display: none;
+    }
+    .restart{
+        right: 63px; 
+        top: 10px;    
+    }
+    .maximize{
+        right: 10px;
+        top: 10px;   
+    }
+    .start-button{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+@media only screen and (max-height:600px) {
+
+    canvas {
+        width: 100%;
+        height: 100%;  
+    }
+    .directions{
+        z-index: 1;
+    }
+    .directionFotos{
+        width: 30px;
+        height: 30px;
+    }
+    .touchButton{
+        width: 40px;
+        height: 40px;
+    }
+    .directionWords{
+        display: none;
+    }
+    .restart{
+        right: 63px; 
+        top: 10px;    
+    }
+    .maximize{
+        right: 10px;
+        top: 10px;  
+    }
+
+}
+
+@media only screen and (max-width:300px) {
+    canvas {
+        width: 100%;
+        height: 100%;  
+    }
+    .start-button{
+        width: 30px;
+        height: 30px;
+    }
+
+    .directions{
+        z-index: 1;
+    }
+    .directionFotos{
+        width: 30px;
+        height: 30px;
+    }
+    .touchButton{
+        width: 40px;
+        height: 40px;
+    }
+    .directionWords{
+        display: none;
+    }
+    .mobile-use{
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+    }
+    .mobile-text{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        font-size: 35px;
+        text-align: center;
+        font-family: 'Lilita One', cursive;
+    }
+    .background-mob{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+    } 
+}
+
+@media only screen and (max-width:850px) {
+    .canvas{
+        width: 720px;
+       
+    }
+    
+    .gameOverPic{
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    .directions{
+       z-index: 1;   
+    }
+    .maintitle{
+        width: 200px;
+        left: 33%;
+    }
+    .directionWords{
+    
+        display: none;
+    }
+    .newTitleStyle{
+        display: none;
+    }  
+    .secondRestart{
+        width: 40px;
+        height: 40px; 
+    }
+    .restart{
+        right: 63px; 
+        top: 3px; 
+    }
+    .maximize{
+        right: 10px;
+        top: 0px;   
+    }
+    .start-button{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media only screen and (max-height:850px) {
+
+     canvas {
+       
+       height: 480px;  
+    }
+    .directions{
+        z-index: 1;
+    }
+    .directionFotos{
+        width: 30px;
+         height: 30px;
+    }
+    .touchButton{
+        width: 40px;
+        height: 40px;
+    }
+    .directionWords{
+        bottom: 45px;
+    }
+    .restart{
+        right: 54px;
+        top: 5px;
+        height: 30px;
+        width: 30px;    
+    }
+    .maximize{
+        right: 13px;
+        top: 6px;
+        width: 30px;
+        height: 30px;
+    }
+}
